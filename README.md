@@ -25,8 +25,8 @@ The website is being developed using HTML, CSS, Bootstrap and PHP, with a focus 
 
 - 👤 **Membership Page** – A planned page for membership information and related features.
 - 🛟 **Support Page** – A planned page for customer support and assistance.
-
-*Note: The Membership and Support pages have not yet been implemented and are planned for future development.*
+- 👷 **Admin Page** - A planned page for iCinema workers to add move movies to the database.
+*Note: The Membership, Support and Admin pages have not yet been implemented and are planned for future development.*
 
 ## 🛠️ Technologies Used
 
@@ -52,6 +52,7 @@ iCinema/
 ├── booking-confirmation.html  # ✅ Booking confirmation
 ├── membership.html             # 👤 Planned membership page
 ├── support.html                # 🛟 Planned support page
+├── Adminpanel.html             # 👷 Planned admin panel 
 ├── css/
 │   └── style.css               # 🎨 Custom website styles
 ├── images/                     # 🖼️ Movie posters and website images
@@ -102,5 +103,5 @@ The website is being developed in stages, with pages covering movie browsing, ci
 The Membership and Support pages are planned for future development.
 
 ## 👨‍💻 Author
-
+Eyimofe Cole
 Developed as part of my HND Computing and Software Development studies.
