@@ -52,7 +52,7 @@ iCinema/
 ├── booking-confirmation.html  # ✅ Booking confirmation
 ├── membership.html             # 👤 Planned membership page
 ├── support.html                # 🛟 Planned support page
-├── Adminpanel.html             # 👷 Planned admin panel 
+├── Admin-panel.html             # 👷 Planned admin panel 
 ├── css/
 │   └── style.css               # 🎨 Custom website styles
 ├── images/                     # 🖼️ Movie posters and website images
