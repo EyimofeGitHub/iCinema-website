@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>iCinema</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/site.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="Index.html">iCinema</a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movies.html">Movies</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Cinemas.html">Cinemas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Membership.html">Membership</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Support.html">Support</a>
+                </li>
+
+            </ul>
+
+            <form class="d-flex" role="search" action="Movies.html" method="get">
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    name="search"
+                    placeholder="Search movies"
+                    aria-label="Search movies">
+
+                <button class="btn btn-outline-secondary" type="submit">
+                    Search
+                </button>
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4">
+
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="Index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="Movies.html">Movies</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="MovieDetail.html">Movie Title</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="Showtimes.html">Showtimes & Tickets</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Seats & Extras
+            </li>
+        </ol>
+    </nav>
+
+<!-- Booking Progress Bar -->
+<section class="mb-5">
+
+    <div class="d-flex align-items-start justify-content-between">
+
+        <!-- Step 1: Showtimes - Completed -->
+        <div class="text-center">
+            <div class="rounded-circle bg-success text-white
+                        d-flex align-items-center justify-content-center
+                        mx-auto mb-2"
+                 style="width: 40px; height: 40px;">
+                &#10003;
+            </div>
+            <small class="fw-bold">Showtimes</small>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-grow-1 border-top border-success mt-3 mx-2"></div>
+
+        <!-- Step 2: Seats & Extras - Current -->
+        <div class="text-center">
+            <div class="rounded-circle bg-primary text-white
+                        d-flex align-items-center justify-content-center
+                        mx-auto mb-2"
+                 style="width: 40px; height: 40px;">
+                2
+            </div>
+            <small class="fw-bold text-primary">Seats & Extras</small>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-grow-1 border-top mt-3 mx-2"></div>
+
+        <!-- Step 3: Checkout -->
+        <div class="text-center">
+            <div class="rounded-circle border bg-body text-body
+                        d-flex align-items-center justify-content-center
+                        mx-auto mb-2"
+                 style="width: 40px; height: 40px;">
+                3
+            </div>
+            <small>Checkout</small>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-grow-1 border-top mt-3 mx-2"></div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="text-center">
+            <div class="rounded-circle border bg-body text-body
+                        d-flex align-items-center justify-content-center
+                        mx-auto mb-2"
+                 style="width: 40px; height: 40px;">
+                
+            </div>
+            <small>Confirmation</small>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Movie Details -->
+    <section class="mb-5">
+        <div class="row align-items-start g-4">
+
+            <!-- Movie Poster -->
+            <div class="col-5 col-md-3">
+                <div class="bg-body-secondary rounded d-flex
+                            align-items-center justify-content-center"
+                     style="min-height: 220px;">
+                    <span class="text-secondary text-center p-2">
+                        Movie Poster
+                    </span>
+                </div>
+            </div>
+
+            <!-- Movie Description -->
+            <div class="col-7 col-md-9">
+                <h1 class="h2">Movie Title</h1>
+
+                <p class="text-muted">
+                    2026 | Sci-Fi | 12A | 2h 15m
+                </p>
+
+                <p>
+                    A short description of the movie goes here.
+                    Introduce the story, the main characters,
+                    and what makes the film interesting.
+                </p>
+
+                <!-- Booking Information -->
+                <div class="border-top border-bottom py-3 mb-3">
+
+                    <div class="mb-3">
+                        <h2 class="h6 mb-1">Cinema</h2>
+                        <p class="mb-0">
+                            iCinema — Central London
+                        </p>
+                        <p class="text-muted small mb-0">
+                            123 Example Street, London
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="h6 mb-1">Screening Details</h2>
+                        <p class="mb-0">
+                            Saturday, 17 October 2026
+                        </p>
+                        <p class="text-muted small mb-0">
+                            7:30 PM | 2D | Screen 3
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="Showtimes.html" class="btn btn-outline-primary">
+                    Change Showtimes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seat Selection -->
+    <section class="mb-5">
+        <h2 class="h3 text-center mb-3">Choose Your Seats</h2>
+
+        <!-- Seat Legend -->
+        <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+
+            <span>
+                <span class="badge bg-white border border-success">
+                    &nbsp;
+                </span>
+                Available
+            </span>
+
+            <span>
+                <span class="badge bg-secondary">&nbsp;</span>
+                Taken
+            </span>
+
+            <span>
+                <span class="badge bg-info text-dark">♿</span>
+                Accessible
+            </span>
+
+            <span>
+                <span class="badge bg-primary">&nbsp;</span>
+                Selected
+            </span>
+
+        </div>
+
+        <!-- Cinema Screen -->
+        <div class="text-center bg-body-secondary border rounded
+                    p-2 mb-4 mx-auto"
+             style="max-width: 500px;">
+            <strong>SCREEN</strong>
+        </div>
+
+        <!-- Seating Plan -->
+        <div class="container-fluid overflow-auto">
+            <div class="d-flex flex-column align-items-center gap-3">
+
+                                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">A</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A1"
+                            data-status="available"
+                            aria-label="Seat A1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A2"
+                            data-status="available"
+                            aria-label="Seat A2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A3"
+                            data-status="taken"
+                            aria-label="Seat A3" disabled>
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A4"
+                            data-status="available"
+                            aria-label="Seat A4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A5"
+                            data-status="available"
+                            aria-label="Seat A5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A6"
+                            data-status="available"
+                            aria-label="Seat A6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A7"
+                            data-status="available"
+                            aria-label="Seat A7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A8"
+                            data-status="available"
+                            aria-label="Seat A8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="A9"
+                            data-status="available"
+                            aria-label="Seat A9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">B</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-info seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B1"
+                            data-status="accessible"
+                            aria-label="Accessible seat B1">
+
+                            ♿
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B2"
+                            data-status="available"
+                            aria-label="Seat B2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B3"
+                            data-status="available"
+                            aria-label="Seat B3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B4"
+                            data-status="available"
+                            aria-label="Seat B4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B5"
+                            data-status="available"
+                            aria-label="Seat B5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B6"
+                            data-status="available"
+                            aria-label="Seat B6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B7"
+                            data-status="available"
+                            aria-label="Seat B7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B8"
+                            data-status="available"
+                            aria-label="Seat B8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="B9"
+                            data-status="available"
+                            aria-label="Seat B9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">C</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C1"
+                            data-status="available"
+                            aria-label="Seat C1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C2"
+                            data-status="available"
+                            aria-label="Seat C2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C3"
+                            data-status="available"
+                            aria-label="Seat C3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C4"
+                            data-status="available"
+                            aria-label="Seat C4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C5"
+                            data-status="available"
+                            aria-label="Seat C5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C6"
+                            data-status="available"
+                            aria-label="Seat C6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-secondary seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C7"
+                            data-status="taken"
+                            aria-label="Seat C7" disabled>
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C8"
+                            data-status="available"
+                            aria-label="Seat C8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="C9"
+                            data-status="available"
+                            aria-label="Seat C9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">D</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D1"
+                            data-status="available"
+                            aria-label="Seat D1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D2"
+                            data-status="available"
+                            aria-label="Seat D2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D3"
+                            data-status="available"
+                            aria-label="Seat D3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D4"
+                            data-status="available"
+                            aria-label="Seat D4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D5"
+                            data-status="available"
+                            aria-label="Seat D5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D6"
+                            data-status="available"
+                            aria-label="Seat D6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D7"
+                            data-status="available"
+                            aria-label="Seat D7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D8"
+                            data-status="available"
+                            aria-label="Seat D8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-info seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="D9"
+                            data-status="accessible"
+                            aria-label="Accessible seat D9">
+
+                            ♿
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">E</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E1"
+                            data-status="available"
+                            aria-label="Seat E1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E2"
+                            data-status="available"
+                            aria-label="Seat E2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E3"
+                            data-status="available"
+                            aria-label="Seat E3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E4"
+                            data-status="available"
+                            aria-label="Seat E4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E5"
+                            data-status="taken"
+                            aria-label="Seat E5" disabled>
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E6"
+                            data-status="available"
+                            aria-label="Seat E6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E7"
+                            data-status="available"
+                            aria-label="Seat E7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E8"
+                            data-status="available"
+                            aria-label="Seat E8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="E9"
+                            data-status="available"
+                            aria-label="Seat E9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">F</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-info seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F1"
+                            data-status="accessible"
+                            aria-label="Accessible seat F1">
+
+                            ♿
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F2"
+                            data-status="available"
+                            aria-label="Seat F2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F3"
+                            data-status="available"
+                            aria-label="Seat F3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F4"
+                            data-status="available"
+                            aria-label="Seat F4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F5"
+                            data-status="available"
+                            aria-label="Seat F5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F6"
+                            data-status="available"
+                            aria-label="Seat F6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F7"
+                            data-status="available"
+                            aria-label="Seat F7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F8"
+                            data-status="available"
+                            aria-label="Seat F8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="F9"
+                            data-status="available"
+                            aria-label="Seat F9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">G</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G1"
+                            data-status="available"
+                            aria-label="Seat G1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G2"
+                            data-status="taken"
+                            aria-label="Seat G2" disabled>
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G3"
+                            data-status="available"
+                            aria-label="Seat G3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G4"
+                            data-status="available"
+                            aria-label="Seat G4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G5"
+                            data-status="available"
+                            aria-label="Seat G5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G6"
+                            data-status="available"
+                            aria-label="Seat G6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G7"
+                            data-status="available"
+                            aria-label="Seat G7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G8"
+                            data-status="available"
+                            aria-label="Seat G8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="G9"
+                            data-status="available"
+                            aria-label="Seat G9">
+
+                            9
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3">
+                    <strong style="width: 18px;">H</strong>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H1"
+                            data-status="available"
+                            aria-label="Seat H1">
+
+                            1
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H2"
+                            data-status="available"
+                            aria-label="Seat H2">
+
+                            2
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H3"
+                            data-status="available"
+                            aria-label="Seat H3">
+
+                            3
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2 me-1 me-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H4"
+                            data-status="available"
+                            aria-label="Seat H4">
+
+                            4
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H5"
+                            data-status="available"
+                            aria-label="Seat H5">
+
+                            5
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H6"
+                            data-status="available"
+                            aria-label="Seat H6">
+
+                            6
+
+                        </button>
+                    </div>
+                    <div class="d-flex gap-1 gap-md-2">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H7"
+                            data-status="available"
+                            aria-label="Seat H7">
+
+                            7
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-success seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H8"
+                            data-status="available"
+                            aria-label="Seat H8">
+
+                            8
+
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-info seat-button p-0"
+                            style="width: 36px; height: 36px; flex-shrink: 0;"
+                            data-seat="H9"
+                            data-status="accessible"
+                            aria-label="Accessible seat H9">
+
+                            ♿
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Selected Seats Summary -->
+        <div class="card mt-4 mx-auto" style="max-width: 500px;">
+            <div class="card-body text-center">
+
+                <h3 class="h5">Your Seats</h3>
+
+                <p id="selectedSeats" class="mb-2">
+                    No seats selected
+                </p>
+
+                <p class="mb-3">
+                    Seats selected:
+                    <strong id="seatCount">0</strong>
+                </p>
+
+                <button type="button" id="clearSeats"
+                        class="btn btn-outline-secondary btn-sm">
+                    Clear Selection
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Food and Drinks -->
+    <section class="mb-5">
+        <h2 class="h3 mb-3">Food & Drinks</h2>
+
+        <p class="text-muted">
+            Treat yourself to a snack during the film. (only bought in cinema confectionary till)
+        </p>
+
+        <div class="row row-cols-1 row-cols-sm-3 g-3">
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="fs-1">🍿</div>
+                        <h3 class="h6">Large Popcorn</h3>
+                        <p class="mb-0 text-muted">£5.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="fs-1">🥤</div>
+                        <h3 class="h6">Large Drink</h3>
+                        <p class="mb-0 text-muted">£3.50</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="fs-1">🍬</div>
+                        <h3 class="h6">Candy</h3>
+                        <p class="mb-0 text-muted">£2.50</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Continue to Checkout -->
+    <div class="text-center mt-4 mb-3">
+        <a href="Checkout.html" class="btn btn-primary btn-lg">
+            Continue to Checkout
+        </a>
+    </div>
+
+</main>
+
+<footer class="bg-body-tertiary border-top mt-5 py-4">
+    <div class="container">
+
+        <div class="row align-items-center gy-3">
+
+            <!-- Website Name -->
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <h5 class="mb-1">iCinema</h5>
+                <p class="text-secondary small mb-0">
+                    Your next movie experience starts here.
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="col-12 col-md-4 text-center">
+                <a href="Index.html" class="text-decoration-none text-secondary me-3">
+                    Home
+                </a>
+
+                <a href="Movies.html" class="text-decoration-none text-secondary me-3">
+                    Movies
+                </a>
+
+                <a href="Cinemas.html" class="text-decoration-none text-secondary">
+                    Cinemas
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <p class="text-secondary small mb-0">
+                    &copy; 2026 iCinema
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+<!-- Seat Selection JavaScript -->
+<script>
+    const seats = document.querySelectorAll('.seat-button');
+    const selectedSeatsDisplay = document.getElementById('selectedSeats');
+    const seatCountDisplay = document.getElementById('seatCount');
+    const clearButton = document.getElementById('clearSeats');
+
+    const selectedSeats = new Set();
+
+    function updateSeatSummary() {
+        const seatList = [...selectedSeats].sort();
+
+        selectedSeatsDisplay.textContent = seatList.length
+            ? seatList.join(', ')
+            : 'No seats selected';
+
+        seatCountDisplay.textContent = seatList.length;
+    }
+
+    seats.forEach(seat => {
+        seat.addEventListener('click', function () {
+            const seatId = this.dataset.seat;
+            const status = this.dataset.status;
+
+            if (status === 'taken') {
+                return;
+            }
+
+            if (selectedSeats.has(seatId)) {
+                selectedSeats.delete(seatId);
+
+                this.classList.remove('btn-primary');
+
+                this.classList.add(
+                    status === 'accessible'
+                        ? 'btn-info'
+                        : 'btn-outline-success'
+                );
+            } else {
+                selectedSeats.add(seatId);
+
+                this.classList.remove('btn-outline-success', 'btn-info');
+                this.classList.add('btn-primary');
+            }
+
+            updateSeatSummary();
+        });
+    });
+
+    clearButton.addEventListener('click', function () {
+        selectedSeats.clear();
+
+        seats.forEach(seat => {
+            if (seat.dataset.status === 'taken') {
+                return;
+            }
+
+            seat.classList.remove('btn-primary');
+
+            seat.classList.add(
+                seat.dataset.status === 'accessible'
+                    ? 'btn-info'
+                    : 'btn-outline-success'
+            );
+        });
+
+        updateSeatSummary();
+    });
+</script>
+
+<!-- Bootstrap JavaScript -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+</body>
+</html>

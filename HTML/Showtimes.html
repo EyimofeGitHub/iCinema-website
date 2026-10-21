@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>iCinema</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/site.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="Index.html">iCinema</a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Movies.html">Movies</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Cinemas.html">Cinemas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Membership.html">Membership</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Support.html">Support</a>
+                </li>
+
+            </ul>
+
+            <form class="d-flex" role="search" action="Movies.html" method="get">
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    name="search"
+                    placeholder="Search movies"
+                    aria-label="Search movies">
+
+                <button class="btn btn-outline-secondary" type="submit">
+                    Search
+                </button>
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Main content area -->
+<main class="container py-4">
+
+    <!-- ==========================================
+         MOVIE DETAILS
+         Displays the selected movie's poster,
+         title, classification and description.
+         ========================================== -->
+    <section class="mb-5">
+
+        <div class="row align-items-start g-4">
+
+            <!-- Movie poster placeholder -->
+            <div class="col-5 col-md-3">
+
+                <div class="bg-body-secondary rounded
+                            d-flex align-items-center justify-content-center"
+                     style="min-height: 220px;">
+
+                    <span class="text-secondary text-center p-2">
+                        Movie Poster
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Movie description and information -->
+            <div class="col-7 col-md-9">
+
+                <!-- Movie title -->
+                <h1 class="h2">Movie Title</h1>
+
+                <!-- Release year, genre, age rating and runtime -->
+                <p class="text-muted">
+                    2026 | Sci-Fi | 12A | 2h 15m
+                </p>
+
+                <!-- Brief movie synopsis -->
+                <p>
+                    A short description of the movie goes here.
+                    Introduce the story, the main characters,
+                    and what makes the film interesting.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CINEMA AND DATE SELECTION
+         Allows the customer to choose a cinema
+         and screening date before finding showtimes.
+         ========================================== -->
+    <section class="border rounded p-3 p-md-4 mb-5"
+             id="booking">
+
+        <h2 class="h4 mb-3">Find Showtimes</h2>
+
+        <!-- Submit the selected cinema and date using GET -->
+        <form action="Showtimes.html" method="get">
+
+            <div class="row g-3">
+
+                <!-- Cinema selection dropdown -->
+                <div class="col-12 col-md-6">
+
+                    <label for="cinema" class="form-label">
+                        Select a Cinema
+                    </label>
+
+                    <select class="form-select"
+                            id="cinema"
+                            name="cinema"
+                            required>
+
+                        <option value="" selected disabled>
+                            Choose a cinema
+                        </option>
+
+                        <option value="1">Cinema 1</option>
+                        <option value="2">Cinema 2</option>
+                        <option value="3">Cinema 3</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Screening date selection dropdown -->
+                <div class="col-12 col-md-6">
+
+                    <label for="date" class="form-label">
+                        Select a Date
+                    </label>
+
+                    <select class="form-select"
+                            id="date"
+                            name="date"
+                            required>
+
+                        <option value="" selected disabled>
+                            Choose a date
+                        </option>
+
+                        <option value="2026-10-15">
+                            Thursday, 15 October
+                        </option>
+
+                        <option value="2026-10-16">
+                            Friday, 16 October
+                        </option>
+
+                        <option value="2026-10-17">
+                            Saturday, 17 October
+                        </option>
+
+                        <option value="2026-10-18">
+                            Sunday, 18 October
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Submit the selected cinema and date -->
+                <div class="col-12">
+
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+                        Find Showtimes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- ==========================================
+         SCREENING FORMAT
+         Allows the customer to choose between
+         2D, 3D, IMAX and 4DX formats.
+         ========================================== -->
+    <section class="mb-4">
+
+        <!-- Screening format section heading -->
+        <label class="form-label fw-semibold">
+            Select Screening Format
+        </label>
+
+        <!-- Radio buttons styled as Bootstrap buttons -->
+        <div class="d-flex flex-wrap gap-2"
+             role="group"
+             aria-label="Screening format">
+
+            <!-- 2D screening option (selected by default) -->
+            <input type="radio"
+                   class="btn-check"
+                   name="format"
+                   id="btnradio1"
+                   value="2D"
+                   autocomplete="off"
+                   checked>
+
+            <label class="btn btn-outline-primary px-4 py-3"
+                   for="btnradio1">
+                2D
+            </label>
+
+
+            <!-- 3D screening option -->
+            <input type="radio"
+                   class="btn-check"
+                   name="format"
+                   id="btnradio2"
+                   value="3D"
+                   autocomplete="off">
+
+            <label class="btn btn-outline-primary px-4 py-3"
+                   for="btnradio2">
+                3D
+            </label>
+
+
+            <!-- IMAX screening option -->
+            <input type="radio"
+                   class="btn-check"
+                   name="format"
+                   id="btnradio3"
+                   value="IMAX"
+                   autocomplete="off">
+
+            <label class="btn btn-outline-primary px-4 py-3"
+                   for="btnradio3">
+                IMAX
+            </label>
+
+
+            <!-- 4DX screening option -->
+            <input type="radio"
+                   class="btn-check"
+                   name="format"
+                   id="btnradio4"
+                   value="4DX"
+                   autocomplete="off">
+
+            <label class="btn btn-outline-primary px-4 py-3"
+                   for="btnradio4">
+                4DX
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FILM SUMMARY
+         Provides a description of the movie's
+         atmosphere, tone and viewing experience.
+         ========================================== -->
+    <section class="mb-4">
+
+        <h2 class="h5">Film Summary</h2>
+
+        <p>
+            A summary of the film, describing its story,
+            atmosphere and overall viewing experience.
+            Use descriptive language to help customers
+            decide whether the film interests them.
+        </p>
+
+    </section>
+
+
+    <!-- ==========================================
+         CONTINUE TO SEATS AND EXTRAS
+         Links the customer to the next stage
+         of the booking process.
+         ========================================== -->
+    <div class="text-center mb-5">
+
+        <a href="Seats.html" class="btn btn-primary btn-lg">
+            Continue to Seats and Extras
+        </a>
+
+    </div>
+
+</main>
+
+<footer class="bg-body-tertiary border-top mt-5 py-4">
+    <div class="container">
+
+        <div class="row align-items-center gy-3">
+
+            <!-- Website Name -->
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <h5 class="mb-1">iCinema</h5>
+                <p class="text-secondary small mb-0">
+                    Your next movie experience starts here.
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="col-12 col-md-4 text-center">
+                <a href="Index.html" class="text-decoration-none text-secondary me-3">
+                    Home
+                </a>
+
+                <a href="Movies.html" class="text-decoration-none text-secondary me-3">
+                    Movies
+                </a>
+
+                <a href="Cinemas.html" class="text-decoration-none text-secondary">
+                    Cinemas
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <p class="text-secondary small mb-0">
+                    &copy; 2026 iCinema
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+<!-- Bootstrap JavaScript bundle.
+     Enables interactive Bootstrap components. -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+</body>
+</html>
