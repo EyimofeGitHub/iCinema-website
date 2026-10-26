@@ -47,9 +47,9 @@ iCinema/
 ├── seats.html                 # 💺 Select seats
 ├── checkout.html              # 💳 Checkout and review booking
 ├── booking-confirmation.html  # ✅ Booking confirmation
-├── membership.html            # 👤 membership page
-├── support.html               # 🛟 support page
-├── Admin-panel.html           # 👷 admin panel 
+├── membership.html            # 👤 Membership page
+├── support.html               # 🛟 Support page
+├── Admin-panel.html           # 👷 Admin panel 
 ├── css/
 │   └── style.css               # 🎨 Custom website styles
 ├── images/                     # 🖼️ Movie posters and website images
@@ -96,8 +96,6 @@ This project provides an opportunity to develop practical skills in:
 **Status: In Development 🚧**
 
 The website is being developed in stages, with pages covering movie browsing, cinema information, showtimes and the booking process.
-
-The Membership and Support pages are planned for future development.
 
 ## 👨‍💻 Author
 Eyimofe Cole
