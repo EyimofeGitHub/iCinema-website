@@ -11,7 +11,7 @@
         rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/site.css">
+    <link rel="stylesheet" href="../CSS/site.css">
 </head>
 
 <body>
@@ -192,29 +192,36 @@
                     and what makes the film interesting.
                 </p>
 
-                <!-- Booking Information -->
-                <div class="border-top border-bottom py-3 mb-3">
-
-                    <div class="mb-3">
-                        <h2 class="h6 mb-1">Cinema</h2>
-                        <p class="mb-0">
-                            iCinema — Central London
-                        </p>
-                        <p class="text-muted small mb-0">
-                            123 Example Street, London
-                        </p>
+                <!-- Cinema and screening selection -->
+                <div class="cinema-date-panel rounded-4 border p-3 p-md-4 mb-3">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <div class="date-picker-card h-100">
+                                <label for="checkoutCinema" class="form-label fw-semibold">Choose a cinema</label>
+                                <select class="form-select cinema-picker-input" id="checkoutCinema" name="cinema">
+                                    <option value="central-london" data-address="123 Example Street, London" selected>iCinema Central London</option>
+                                    <option value="manchester" data-address="45 Market Street, Manchester">iCinema Manchester</option>
+                                    <option value="edinburgh" data-address="20 Example Road, Edinburgh">iCinema Edinburgh</option>
+                                </select>
+                                <p class="form-text mb-0" id="checkoutCinemaAddress">123 Example Street, London</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="date-picker-card h-100">
+                                <label for="checkoutDate" class="form-label fw-semibold">
+                                    Choose a date
+                                </label>
+                                <input class="form-control date-picker-input" type="date"
+                                       id="checkoutDate" name="date" value="2026-10-26" required>
+                                <p class="form-text mb-0">Select a screening date.</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
+                    <div class="selected-screening-summary rounded-3 bg-body-tertiary p-3 mt-3">
                         <h2 class="h6 mb-1">Screening Details</h2>
-                        <p class="mb-0">
-                            Saturday, 17 October 2026
-                        </p>
-                        <p class="text-muted small mb-0">
-                            7:30 PM | 2D | Screen 3
-                        </p>
+                        <p class="mb-0"><span id="checkoutScreeningDateSummary">Monday, 26 October 2026</span></p>
+                        <p class="text-body-secondary small mb-0">7:30 PM | 2D | Screen 3</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -230,10 +237,10 @@
     <div class="mb-4">
         <h3 class="h6 mb-1">Movie Title</h3>
         <p class="text-muted small mb-0">
-            Saturday, 17 October 2026 | 7:30 PM
+            <span id="checkoutBookingDateSummary">Monday, 26 October 2026</span> | 7:30 PM
         </p>
         <p class="text-muted small mb-0">
-            iCinema — Central London | Screen 3 | 2D
+            <span id="checkoutBookingCinemaSummary">iCinema Central London</span> | Screen 3 | 2D
         </p>
     </div>
 
@@ -429,6 +436,43 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous">
+</script>
+<script>
+    const checkoutCinema = document.getElementById("checkoutCinema");
+    const checkoutDate = document.getElementById("checkoutDate");
+
+    function updateCheckoutSummary() {
+        const selectedCinema = checkoutCinema.options[checkoutCinema.selectedIndex];
+        const selectedDate = new Date(`${checkoutDate.value}T00:00:00`);
+
+        document.getElementById("checkoutCinemaAddress").textContent = selectedCinema.dataset.address;
+        document.getElementById("checkoutBookingCinemaSummary").textContent = selectedCinema.textContent;
+
+        if (checkoutDate.value) {
+            const formattedDate = new Intl.DateTimeFormat("en-GB", {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }).format(selectedDate);
+            document.getElementById("checkoutScreeningDateSummary").textContent = formattedDate;
+            document.getElementById("checkoutBookingDateSummary").textContent = formattedDate;
+        }
+    }
+
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowValue = new Date(tomorrow.getTime() - tomorrow.getTimezoneOffset() * 60000)
+        .toISOString()
+        .slice(0, 10);
+    checkoutDate.min = tomorrowValue;
+    if (checkoutDate.value < tomorrowValue) {
+        checkoutDate.value = tomorrowValue;
+    }
+
+    checkoutCinema.addEventListener("change", updateCheckoutSummary);
+    checkoutDate.addEventListener("change", updateCheckoutSummary);
+    updateCheckoutSummary();
 </script>
 
 </body>
