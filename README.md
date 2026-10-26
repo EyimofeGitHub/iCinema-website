@@ -20,13 +20,10 @@ The website is being developed using HTML, CSS, Bootstrap and PHP, with a focus 
 - 💺 **Seats Page** – Provides an interface for selecting seats.
 - 💳 **Checkout Page** – Presents the checkout stage of the booking process.
 - ✅ **Booking Confirmation Page** – Displays booking confirmation information.
-
-### 🚧 Planned Features
-
-- 👤 **Membership Page** – A planned page for membership information and related features.
-- 🛟 **Support Page** – A planned page for customer support and assistance.
-- 👷 **Admin Page** - A planned page for iCinema workers to add move movies to the database.
-*Note: The Membership, Support and Admin pages have not yet been implemented and are planned for future development.*
+- 👤 **Membership Page** – membership information and related features.
+- 🛟 **Support Page** – customer support and assistance.
+- 👷 **Admin Page** - iCinema workers to add move movies to the database.
+*Note: The Membership, Support and Admin pages have now been implemented.*
 
 ## 🛠️ Technologies Used
 
@@ -50,9 +47,9 @@ iCinema/
 ├── seats.html                 # 💺 Select seats
 ├── checkout.html              # 💳 Checkout and review booking
 ├── booking-confirmation.html  # ✅ Booking confirmation
-├── membership.html             # 👤 Planned membership page
-├── support.html                # 🛟 Planned support page
-├── Admin-panel.html             # 👷 Planned admin panel 
+├── membership.html            # 👤 membership page
+├── support.html               # 🛟 support page
+├── Admin-panel.html           # 👷 admin panel 
 ├── css/
 │   └── style.css               # 🎨 Custom website styles
 ├── images/                     # 🖼️ Movie posters and website images
