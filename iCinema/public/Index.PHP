@@ -26,11 +26,5 @@ if ($route === null) {
     exit;
 }
 
-if ($page === 'admin-dashboard' && empty($_SESSION['is_admin'])) {
-    http_response_code(403);
-    echo '<h1>403 Forbidden</h1><p>Administrator access is required.</p>';
-    exit;
-}
-
 // Require the layout file and pass the route data to it.
 require $basePath . "/reasources/views/layouts/layout.php";
