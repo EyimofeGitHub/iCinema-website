@@ -54,6 +54,10 @@
                     <a class="nav-link<?php echo $activePage === 'support' ? ' active' : ''; ?>" href="<?php echo htmlspecialchars($publicPath . '/Index.PHP?page=support', ENT_QUOTES, 'UTF-8'); ?>"<?php echo $activePage === 'support' ? ' aria-current="page"' : ''; ?>>Support</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link<?php echo $activePage === 'admin-dashboard' ? ' active' : ''; ?>" href="<?php echo htmlspecialchars($publicPath . '/Index.PHP?page=admin-dashboard', ENT_QUOTES, 'UTF-8'); ?>"<?php echo $activePage === 'admin-dashboard' ? ' aria-current="page"' : ''; ?>>Admin Dashboard</a>
+                </li>
+
             </ul>
 
             <form class="d-flex" role="search" action="<?php echo htmlspecialchars($publicPath . '/Index.PHP', ENT_QUOTES, 'UTF-8'); ?>" method="get">
