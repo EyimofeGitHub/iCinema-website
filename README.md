@@ -39,7 +39,7 @@ The following structure organises the website pages in a logical order, followin
 
 ```text
 iCinema/
-├── index.html                 # 🏠 Home page
+├── home.html                 # 🏠 Home page
 ├── movies.html                # 🎬 Browse available movies
 ├── movie-detail.html          # 🎞️ View individual movie details
 ├── cinemas.html               # 🍿 Browse available cinemas
